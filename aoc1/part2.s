@@ -155,8 +155,8 @@ CopyVal:
 ; ---------------------------------------------------------------------------
 ; Static Values
 InputFileNameString:
-	.asciz	"puzzle1.txt"
+	.ascii	"puzzle1.txt\0"
 FileModeString:
-	.asciz	"r"
+	.ascii	"r\0"
 FormatString:
-	.asciz	"%d\n"
+	.ascii	"%d\n\0"
