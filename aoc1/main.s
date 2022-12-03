@@ -1,5 +1,5 @@
 	.globl	_start
-	.p2align	2
+	.align	2
 _start:
 ; Calculate the addresses from precalculated offsets and load into the registers
 ; Set up the char array
