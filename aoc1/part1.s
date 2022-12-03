@@ -19,7 +19,7 @@ LoadFileModeStringRegister:
 	adrp	x1, FileModeString@PAGE
 
 ; Open the input file
-LoadFileModeString:
+LoadFile:
 	add	x1, x1, FileModeString@PAGEOFF
 	bl	_fopen
 	mov	x19, x0
@@ -82,7 +82,7 @@ PrintAnswer:
 	ldp	x22, x21, [sp, #16]
 	ldp	x28, x27, [sp], #64
 	ret
-	.loh AdrpAdd	LoadFileModeStringRegister, LoadFileModeString
+	.loh AdrpAdd	LoadFileModeStringRegister, LoadFile
 	.loh AdrpAdd	LoadInputFileRegister, LoadInputFile
 	.loh AdrpAdd	LoadFormatStringRegister, PrintAnswer
 
